@@ -1,11 +1,12 @@
 import http from 'k6/http';
 import { check } from 'k6';
-
+import { Load } from './rampingProfile'
 const API_URI = 'YOUR_API_URI'
 const token = 'YOUR_USER_TOKEN'
 export let options = {
+  stages: Load,
   vus: 1500,
-  duration: '5m'
+  duration: '10m'
 }
 
 export default function () {
