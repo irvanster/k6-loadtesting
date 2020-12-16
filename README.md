@@ -4,7 +4,7 @@
 This is the minimal script to K6 load testing.
 | VUs  | Duration |
 |------|----------|
-| 1500 | 5m     |
+| 1500 | 10m     |
 ## Requirements
 - NodeJS v12 LTS
 - K6 CLI
