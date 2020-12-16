@@ -11,7 +11,7 @@ This is the minimal script to K6 load testing.
 ## How To Run
 
 - Make sure you had clone this repo
-- Edit `API_URI` variable from `script.js` file according to your API URI.
+- Edit `API_URI` & `token` variable from `script.js` file according to your API URI & user token.
 - Open your terminal in this project and run 
   ```
   k6 run script.js
