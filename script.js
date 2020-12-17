@@ -1,12 +1,38 @@
 import http from 'k6/http';
 import { check } from 'k6';
-import { Load } from './rampingProfile'
+
 const API_URI = 'YOUR_API_URI'
 const token = 'YOUR_USER_TOKEN'
+
+//Ramping Profile
+const Load = [
+  { duration: "2m", target: 1500 },
+  { duration: "6m", target: 1500 },
+  { duration: "2m", target: 0 },
+]
+const Soak = [
+  { duration: "1m", target: 1500 },
+  { duration: "8m", target: 1500 },
+  { duration: "1m", target: 0 },
+]
+const Spike = [
+  { duration: "1m15s", target: 250 },
+  { duration: "1m15s", target: 250 },
+  { duration: "1m15s", target: 1500 },
+  { duration: "5m", target: 1500 },
+  { duration: "1m15s", target: 0 },
+]
+const Stress = [
+  { duration: "2m", target: 750 },
+  { duration: "2m", target: 750 },
+  { duration: "2m", target: 1500 },
+  { duration: "2m", target: 1500 },
+  { duration: "2m", target: 0 },
+]
+
+//End Ramping Profile
 export let options = {
   stages: Load,
-  vus: 1500,
-  duration: '10m'
 }
 
 export default function () {
