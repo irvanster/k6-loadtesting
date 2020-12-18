@@ -50,23 +50,23 @@ export default function () {
       password: 'google098'
     }, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }],
 
-    ['GET', `${API_URI}/carts`, {
+    ['GET', `${API_URI}/carts/60`, null, {
       headers: {
         'Authorization': token
       }
     }],
-    ['GET', `${API_URI}/carts/1`, {
+    ['GET', `${API_URI}/carts`, null, {
       headers: {
         'Authorization': token
       }
     }],
 
-    ['POST', `${API_URI}/checkout`, null, {
+    ['GET', `${API_URI}/checkout`, null, {
       headers: {
         'Authorization': token
       }
     }],
-    ['GET', `${API_URI}/checkout`, null, {
+    ['POST', `${API_URI}/checkout`, null, {
       headers: {
         'Authorization': token
       }
@@ -84,31 +84,26 @@ export default function () {
     }],
 
     ['GET', `${API_URI}/products`, null],
-    ['GET', `${API_URI}/products/2`, null],
-    ['POST', `${API_URI}/products`, {
-      name: "Prodak Produk",
-      price: 32900,
-      quantity: 100
-    }],
+    ['GET', `${API_URI}/products/60`, null],
+    // ['POST', `${API_URI}/products`, {
+    //   name: "Prodak Produk",
+    //   price: 32900,
+    //   quantity: 100
+    // }],
     
     ['GET', `${API_URI}/profile/`, null, {
       headers: {
         'Authorization': token
       }
     }],
-    ['PATCH', `${API_URI}/profile/`, {
-      name: 'Tova Maukemana Sih',
-    }, {
-        headers: {
-          'Authorization': token
-        }
-      }],
+    // ['PATCH', `${API_URI}/profile/`, {
+    //   name: 'Tova Maukemana Sih',
+    // }, {
+    //     headers: {
+    //       'Authorization': token
+    //     }
+    //   }],
 
-    ['GET', `${API_URI}/addresses/`, null, {
-      headers: {
-        'Authorization': token
-      }
-    }],
     ['POST', `${API_URI}/addresses/`, {
       name: 'Rumah',
       address: 'Jl. Banjiran, Warungasem, Batang',
@@ -119,14 +114,19 @@ export default function () {
           'Authorization': token
         }
       }],
-    ['PATCH', `${API_URI}/addresses/1`, {
+    ['GET', `${API_URI}/addresses/`, null, {
+      headers: {
+        'Authorization': token
+      }
+    }],
+    ['PATCH', `${API_URI}/addresses/9`, {
       recipient: 'Tova'
     }, {
         headers: {
           'Authorization': token
         }
       }],
-    ['GET', `${API_URI}/addresses/1/set_primary`, null, {
+    ['GET', `${API_URI}/addresses/9/set_primary`, null, {
       headers: {
         'Authorization': token
       }
