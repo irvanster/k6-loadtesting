@@ -106,7 +106,7 @@ export default function () {
 
     ['POST', `${API_URI}/addresses/`, {
       name: 'Rumah',
-      address: 'Jl. Banjiran, Warungasem, Batang',
+      address: 'jl. Banjiran, Warungasem, Batang',
       recipient: 'Irvan',
       phone: '08224927912'
     }, {
