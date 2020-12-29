@@ -8,7 +8,7 @@ This is the minimal script to K6 load testing.
 
 | VUs | Duration |
 |------|----------|
-| 1500 | 10m |
+| 200 | 5m |
 
 
 # K6 Installation
