@@ -28,7 +28,6 @@ There have been reports of users being unable to download the key from Ubuntu's 
 
     $ wget -q -O - https://bintray.com/user/downloadSubjectPublicKey?username=bintray | sudo apt-key add -
 
-<br/>
 ### Windows (MSI installer)
 
 Download the k6 installer from  [here](https://dl.bintray.com/loadimpact/windows/k6-v0.29.0-amd64.msi)
