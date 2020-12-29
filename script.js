@@ -6,28 +6,27 @@ const token = 'YOUR_USER_TOKEN'
 
 //Ramping Profile
 const Load = [
-  { duration: "2m", target: 1500 },
-  { duration: "6m", target: 1500 },
-  { duration: "2m", target: 0 },
+  { duration: "1m", target: 200 },
+  { duration: "3m", target: 200 },
+  { duration: "1m", target: 0 },
 ]
 const Soak = [
-  { duration: "1m", target: 1500 },
-  { duration: "8m", target: 1500 },
+  { duration: "1m", target: 200 },
+  { duration: "8m", target: 200 },
   { duration: "1m", target: 0 },
 ]
 const Spike = [
-  { duration: "1m15s", target: 250 },
-  { duration: "1m15s", target: 250 },
-  { duration: "1m15s", target: 1500 },
-  { duration: "5m", target: 1500 },
+  { duration: "1m15s", target: 33.33 }, //200/6 = 33.3333333
+  { duration: "1m15s", target: 33.33 },
+  { duration: "1m55s", target: 200 },
   { duration: "1m15s", target: 0 },
 ]
 const Stress = [
-  { duration: "2m", target: 750 },
-  { duration: "2m", target: 750 },
-  { duration: "2m", target: 1500 },
-  { duration: "2m", target: 1500 },
-  { duration: "2m", target: 0 },
+  { duration: "1m", target: 100 }, // 200/2 = 100
+  { duration: "1m", target: 100 },
+  { duration: "1m", target: 200 },
+  { duration: "1m", target: 200 },
+  { duration: "1m", target: 0 },
 ]
 
 //End Ramping Profile
@@ -106,7 +105,7 @@ export default function () {
 
     ['POST', `${API_URI}/addresses/`, {
       name: 'Rumah',
-      address: 'jl. Banjiran, Warungasem, Batang',
+      address: 'Jl. Banjiran, Warungasem, Batang',
       recipient: 'Irvan',
       phone: '08224927912'
     }, {
